@@ -1,5 +1,8 @@
 # portfolio
 
+# user: rain@gmail.com
+# pass: admin
+
 ## Project setup
 ```
 npm install
