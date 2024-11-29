@@ -68,7 +68,7 @@ export default {
       if (this.email === validEmail && this.password === validPassword) {
         alert('Login successful!');
         // Redirect to the specified URL
-        window.location.href = 'http://localhost:8080/portfolio/profile';
+        window.location.href = 'https://cruz-portfolio-theta.vercel.app/portfolio/profile';
       } else {
         this.errorMessage = 'Invalid email or password. Please try again.';
       }
