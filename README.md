@@ -1,5 +1,9 @@
 # portfolio
 
+# user: rain@gmail.com
+# pass: admin
+# Vercel Link: https://cruz-portfolio-jade.vercel.app/
+
 ## Project setup
 ```
 npm install
