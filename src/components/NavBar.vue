@@ -63,7 +63,7 @@ export default {
 /* Navbar styles */
 .navbar-nav .nav-link {
   font-size: 1 rem; /* Larger font size */
-  margin: 0 15px; /* Equal spacing between links */
+  margin: 0 10px; /* Equal spacing between links */
   border-radius: 5px; /* Rounded corners */
   padding: 5px 10px; /* Padding for better click area */
   transition: background-color 0.3s, color 0.5s; /* Smooth transition for hover effects */
