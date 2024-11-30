@@ -1,9 +1,16 @@
 <template>
   <nav class="navbar navbar-expand-lg" :style="{ backgroundColor: currentBackgroundColor }">
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
+    <div class="navbar-container">
+      <ul class="navbar-nav">
         <li class="nav-item" v-for="(link, index) in navLinks" :key="index">
-          <a class="nav-link" :class="{ 'nav-link-hover': true }" :style="{ color: currentLinkColor }" :href="link.href">{{ link.text }}</a>
+          <a 
+            class="nav-link" 
+            :class="{ 'nav-link-hover': true }" 
+            :style="{ color: currentLinkColor }" 
+            :href="link.href"
+          >
+            {{ link.text }}
+          </a>
         </li>
       </ul>
     </div>
@@ -28,17 +35,30 @@ export default {
     currentBackgroundColor() {
       return this.$root.currentTheme === 'light-theme' ? '#3C3D42' : '#E0DDCA';
     },
-    currentTextColor() {
-      return this.$root.currentTheme === 'light-theme' ? '#F6F8E2' : '#9CCD62';
-    },
     currentLinkColor() {
       return this.$root.currentTheme === 'light-theme' ? '#9CCD62' : '#3C3D42';
-    },
+    }
   }
 };
 </script>
 
 <style scoped>
+/* Flexbox to center the navbar content */
+.navbar-container {
+  display: flex;
+  justify-content: center; /* Horizontally center the links */
+  align-items: center; /* Vertically align the links */
+  width: 100%; /* Ensure it spans the full width */
+}
+
+/* Navbar styles */
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
 .navbar-nav .nav-link {
   font-size: 1.25rem; /* Larger font size */
   margin: 0 15px; /* Equal spacing between links */
@@ -49,20 +69,20 @@ export default {
 
 /* Light theme hover effect */
 .navbar-nav .nav-link-hover:hover {
-  background-color: #1E1E1E; /* Lighter green for hover */
-  color: #3C3D42; /* Dark text on hover */
+  background-color: var(--light-hover-color);
+  color: var(--light-text);
 }
 
 /* Dark theme hover effect */
 .dark-theme .navbar-nav .nav-link-hover:hover {
-  background-color: #9ccd62; /* Darker shade for hover */
-  color: #F6F8E2; /* Light text on hover */
+  background-color: var(--dark-hover-color);
+  color: var(--dark-text);
 }
 
 :root {
-  --light-hover-color: #9ccd62; /* Lighter hover color for light theme */
-  --dark-hover-color: #1E1E1E; /* Darker hover color for dark theme */
-  --dark-text: #F6F8E2; /* Text color for dark theme */
-  --light-text: #3C3D42; /* Text color for light theme */
+  --light-hover-color: #9ccd62;
+  --dark-hover-color: #1E1E1E;
+  --dark-text: #F6F8E2;
+  --light-text: #3C3D42;
 }
 </style>
