@@ -51,14 +51,16 @@ export default {
   width: 100%; /* Ensure it spans the full width */
 }
 
-/* Navbar styles */
+/* Prevent vertical stacking */
 .navbar-nav {
   list-style: none;
-  display: flex;
+  display: flex !important; /* Force horizontal layout */
+  flex-direction: row !important; /* Prevent vertical stacking */
   padding: 0;
   margin: 0;
 }
 
+/* Navbar styles */
 .navbar-nav .nav-link {
   font-size: 1.25rem; /* Larger font size */
   margin: 0 15px; /* Equal spacing between links */
