@@ -62,7 +62,7 @@ export default {
 
 /* Navbar styles */
 .navbar-nav .nav-link {
-  font-size: 1.25rem; /* Larger font size */
+  font-size: .75rem; /* Larger font size */
   margin: 0 15px; /* Equal spacing between links */
   border-radius: 5px; /* Rounded corners */
   padding: 5px 10px; /* Padding for better click area */
